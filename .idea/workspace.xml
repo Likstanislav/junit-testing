@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4142325a-42d9-4087-ac9a-3d834df67dff" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Math.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Math.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/MathTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/MathTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +61,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MathTest.summ">
+  <component name="RunManager" selected="JUnit.MathTest">
     <configuration name="MathTest.summ" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -139,10 +139,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MathTest.testArray" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit-testing.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.MathTest" />
+      <option name="METHOD_NAME" value="testArray" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MathTest.summ" />
         <item itemvalue="JUnit.MathTest" />
+        <item itemvalue="JUnit.MathTest.testArray" />
+        <item itemvalue="JUnit.MathTest.summ" />
         <item itemvalue="Gradle.MathTest.summ" />
         <item itemvalue="Gradle.MathTest.testSumm" />
       </list>
