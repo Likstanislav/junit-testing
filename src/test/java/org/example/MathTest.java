@@ -2,29 +2,52 @@ package org.example;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 class MathTest {
+    static Math math = null;
 
-    @Test
-    void summ() {
-        Math math = new Math();
-
-        assertEquals(12, math.summ(5, 7), "Addition does't work");
-//        assert res == 12 : "Sum don't work!";
+    @BeforeAll
+    public static void setUp() {
+        math = new Math();
     }
+
+    @AfterAll
+    public static void tearDown() {
+        math = null;
+    }
+
     @Test
+//    @RepeatedTest(2)
+    @Tag("Array")
     public void testArray() {
-        Math math = new Math();
-        int[] arr = math.setArray(4,6,8,10,0);
-        int[] expected = {4,6,8,10,0};
-        assertArrayEquals(arr,expected);
+        int[] arr = math.setArray(4, 6, 8, 10, 0);
+        int[] expected = {4, 6, 8, 10, 0};
+        assertArrayEquals(arr, expected);
     }
 
-    @Test
-    public void testDivide() {
-        Math math = new Math();
-        assertEquals(5, math.divide(10,2), "Division does't work");
-        assertThrows(ArithmeticException.class, () -> math.divide(5,0));
+
+    @Nested
+    @DisplayName("Test for number")
+    class simpleMath {
+        @Test
+        @Tag("Number")
+        public void testDivide() {
+            assertEquals(5, math.divide(10, 2), "Division does't work");
+            assertThrows(ArithmeticException.class, () -> math.divide(5, 0));
+        }
+
+        @Test
+//        @Disabled
+        @DisplayName("Name test")
+        @Tag("Number")
+        void summ() {
+            assertAll(
+                    () -> assertEquals(12, math.summ(5, 7), "Addition does't work"),
+                    () -> assertNotEquals(12, 10)
+            );
+//        assert res == 12 : "Sum don't work!";
+        }
+
     }
 }
